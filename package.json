@@ -1,0 +1,43 @@
+{
+  "name": "sonymaapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/server.js",
+    "dev": "nodemon ./src/server.ts",
+    "build": "tsc -p ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-cron": "^2.0.2",
+    "@types/node-fetch": "^2.5.4",
+    "cheerio": "^1.0.0-rc.3",
+    "cloudscraper": "^4.5.0",
+    "express": "^4.17.1",
+    "keyv": "^4.0.0",
+    "mongoose": "^5.8.0",
+    "mongoose-simple-random": "^0.4.1",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "node-horriblesubs": "^1.1.0",
+    "puppeteer": "^2.0.0",
+    "themoviedb-api-client": "^1.1.0",
+    "torrent-search-api": "^2.0.10",
+    "winston": "^3.2.1",
+    "xtorrent": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.15",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
+    "@types/mongoose-simple-random": "^0.4.6",
+    "@types/node": "^12.12.15",
+    "@types/puppeteer": "^2.0.0",
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}

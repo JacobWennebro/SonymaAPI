@@ -1,0 +1,6 @@
+{"message":"test","level":"info","service":"user-service"}
+{"message":"test","level":"info","service":"user-service"}
+{"message":"fuck","level":"info","service":"user-service"}
+{"message":"fuck","level":"info","service":"user-service"}
+{"level":"error","message":"fuck you"}
+{"level":"info","message":"fuck you"}
