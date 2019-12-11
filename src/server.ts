@@ -1,8 +1,15 @@
 import fs from 'fs'
 import fetch from 'node-fetch'
 import { promisify } from 'util'
-import AnimeAPI from './anime'
+import AnimeAPI from './apis/anime'
 import winston, { addColors } from 'winston'
+import mongoose from 'mongoose'
+
+mongoose.connect(`mongodb+srv://admin:potatofarm123@cluster0-gme4s.mongodb.net/test?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true }, (err: Error) => {
+    if(err) throw err;
+
+    console.log('Connected to database');
+});
 
 const logger = winston.createLogger({
     transports: [
@@ -13,5 +20,5 @@ const logger = winston.createLogger({
 
 logger.info('fuck you winston');
 
-/* LOAD API's */
-AnimeAPI();
+/* LOAD API's (port) */
+AnimeAPI(3000);

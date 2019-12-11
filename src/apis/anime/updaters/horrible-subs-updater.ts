@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose'
-import PostSchema from './schemas/Post'
+import PostSchema from '../schemas/Post'
 import cron from 'node-cron'
 
 const HorribleSubs = require('node-horriblesubs');
