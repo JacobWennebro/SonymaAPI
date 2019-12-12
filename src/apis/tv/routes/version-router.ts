@@ -7,9 +7,8 @@ const versions = fs.readdirSync(__dirname).filter(f => fs.statSync(join(__dirnam
 
 versions.forEach(v => {
     fs.readdirSync(join(__dirname, v)).forEach(route => {
-        console.log(route)
         router.use('/'+v, require(join(__dirname, v, route)));
-        console.log(`[ANIME-API] Loaded ${v}/${route.replace('.ts', '')} route.`);
+        console.log(`[TV-API] Loaded ${v}/${route.replace('.ts', '')} route.`);
     });
 });
 

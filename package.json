@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/server.js",
     "dev": "nodemon ./src/server.ts --ext js,ts,md",
-    "build": "tsc -p ."
+    "build": "tsc -p . && npm run copy",
+    "copy": "ncp src/apis/anime/docs dist/apis/anime/docs && ncp src/apis/tv/docs dist/apis/tv/docs"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +39,7 @@
     "@types/node": "^12.12.15",
     "@types/puppeteer": "^2.0.0",
     "@types/showdown": "^1.9.3",
+    "ncp": "^2.0.0",
     "nodemon": "^2.0.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"

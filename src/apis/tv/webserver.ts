@@ -21,14 +21,11 @@ export default async (port: Number) => {
 
         try {
             documentation = await readFileSync(path.join(__dirname, `./docs/documentation-v${version}.md`), 'utf8');
-        
+
             versionAmount = (await readdirSync(path.join(__dirname, './docs'))).length;
         }
         catch(e) {
             /* Version doesn't exist */
-
-            console.log(e);
-
             return res.send(`Found no documentation for this API (version ${version})`);
         }
 
@@ -42,6 +39,6 @@ export default async (port: Number) => {
     app.use('/static', Express.static(path.join(__dirname, 'static')));    
 
     app.listen(port, () => {
-        console.log('[ANIME-API] Listening on port '+port);
+        console.log('[TV-API] Listening on port '+port);
     });
 }

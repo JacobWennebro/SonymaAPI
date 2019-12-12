@@ -2,7 +2,7 @@
 
 <head>
     <link href="/static/styles/main.css" rel="stylesheet" type="text/css">
-    <title>Documentation</title>
+    <title>Documentation (v<%= version %>)</title>
 </head>
 
 <body>
@@ -18,7 +18,11 @@
         <div class="docs">
             <select id="versionSelector">
                 <% for (var i =1; i <= versions;  i++ ) { %>
-                    <option value="<%= i %>">Version <%= i %></option>
+                    <% if(version == i) {%>
+                        <option selected value="<%= i %>">Version <%= i %></option>
+                    <% } else { %>
+                        <option value="<%= i %>">Version <%= i %></option>
+                    <% } %>
                 <% } %>
             </select>
             <%- injected_html %>
